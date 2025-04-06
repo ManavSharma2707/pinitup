@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PIN IT UP | Pin It. Style It. Slay It.</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Mobile Navigation Toggle -->
+    <div class="mobile-menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
+    <!-- Header and Navigation -->
+    <header id="header">
+        <div class="logo-container">
+            <h1 class="logo">PIN IT UP</h1>
+            <p class="tagline">Pin It. Style It. Slay It.</p>
+        </div>
+        <nav id="navbar">
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#featured">Featured</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart-container">
+            <div class="search-icon">
+                <i class="fas fa-search"></i>
+            </div>
+            <div class="cart-icon" id="cart-toggle">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Express Your Style</h1>
+            <h2 class="hero-subtitle">Custom Badges That Make A Statement</h2>
+            <p class="hero-text">Transform your everyday accessories with our unique and eye-catching badges</p>
+            <a href="#products" class="cta-button">Shop Now</a>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section id="featured" class="featured-section">
+        <h2 class="section-title">Featured Collections</h2>
+        <div class="featured-categories">
+            <div class="category">
+                <div class="category-image">
+                    <!-- REPLACE WITH ACTUAL IMAGE: Category 1 - Artistic Badges -->
+                    <img src="images/IMG_4375.jpg" alt="Artistic Badges"  >
+                </div>
+                
+                <h3>Artistic</h3>
+                <a href="#products" class="view-category">Explore</a>
+            </div>
+            <div class="category">
+                <div class="category-image">
+                    <!-- REPLACE WITH ACTUAL IMAGE: Category 2 - Minimalist Badges -->
+                    <img src="images/IMG_4381.jpg" alt="Minimalist Badges">
+                </div>
+                <h3>Minimalist</h3>
+                <a href="#products" class="view-category">Explore</a>
+            </div>
+            <div class="category">
+                <div class="category-image">
+                    <!-- REPLACE WITH ACTUAL IMAGE: Category 3 - Statement Badges -->
+                    <img src="images/IMG_4391.jpg" alt="Statement Badges">
+                </div>
+                <h3>Statement</h3>
+                <a href="#products" class="view-category">Explore</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products-section">
+        <div class="section-header">
+            <h2 class="section-title">Our Products</h2>
+            <div class="filter-dropdown">
+                <button class="filter-btn">Filter <i class="fas fa-chevron-down"></i></button>
+                <div class="filter-content">
+                    <a href="#all" data-filter="all">All</a>
+                    <a href="#artistic" data-filter="artistic">Artistic</a>
+                    <a href="#minimalist" data-filter="minimalist">Minimalist</a>
+                    <a href="#statement" data-filter="statement">Statement</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+            <!-- Products will be loaded here via JavaScript -->
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <h2 class="section-title">About PIN IT UP</h2>
+            <p>PIN IT UP was born from a passion for self-expression and a belief that the smallest details can make the biggest statements. Our badges are designed to add that perfect finishing touch to your style, whether pinned on your jacket, bag, or cap.</p>
+            <p>Each badge is crafted with precision and care, ensuring both quality and longevity. We take pride in offering a diverse range of designs that cater to various tastes and styles.</p>
+            <a href="#contact" class="cta-button">Get In Touch</a>
+        </div>
+        <div class="about-image">
+            <!-- REPLACE WITH ACTUAL IMAGE: About Us Image -->
+            <img src="images/logo.jpg" alt="About PIN IT UP">
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section">
+        <div class="newsletter-content">
+            <h2>Join Our Mailing List</h2>
+            <p>Subscribe to receive updates on new collections and exclusive offers</p>
+            <form id="newsletter-form">
+                <input type="email" placeholder="Your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2 class="section-title">Contact Us</h2>
+        <div class="contact-container">
+            <div class="contact-form">
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>123 Badge Street, Pinville, PIN 12345</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>info@pinitup.com</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 (555) 123-4567</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://tiktok.com" target="_blank"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>PIN IT UP</h2>
+                <p>Pin It. Style It. Slay It.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="#products">All Products</a></li>
+                        <li><a href="#featured">Featured</a></li>
+                        <li><a href="#">New Arrivals</a></li>
+                        <li><a href="#">Sale</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help</h3>
+                    <ul>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Shipping & Returns</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Connect</h3>
+                    <ul>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#">Blog</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 PIN IT UP. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-cart" id="close-cart"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be loaded here via JavaScript -->
+            <div class="empty-cart-message">Your cart is empty</div>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-amount">$0.00</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body" id="modal-body">
+                <!-- Product details will be loaded here via JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
