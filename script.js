@@ -27,16 +27,16 @@ $(document).ready(function() {
 
     // Product Data (15 SKUs)
     const products = [
-        { id: 1, name: 'Abstract Art', price: 12.99, category: 'artistic', image: 'images/IMG_4375.jpg', desc: 'Modern abstract design badge' },
-        { id: 2, name: 'Abstract Art', price: 12.99, category: 'artistic', image: 'images/IMG_4402.jpg', desc: 'Modern abstract design badge' },
-        { id: 3, name: 'Abstract Art', price: 12.99, category: 'artistic', image: 'images/IMG_4427.jpg', desc: 'Modern abstract design badge' },
-        { id: 4, name: 'Minimal Flower', price: 9.99, category: 'minimalist', image: 'images/IMG_4381.jpg', desc: 'Simple floral design' },
-        { id: 5, name: 'Minimal Flower', price: 9.99, category: 'minimalist', image: 'images/IMG_4440.jpg', desc: 'Simple floral design' },
-        { id: 6, name: 'Minimal Flower', price: 9.99, category: 'minimalist', image: 'images/IMG_4444.jpg', desc: 'Simple floral design' },
-        { id: 7, name: 'Power Statement', price: 14.99, category: 'statement', image: 'images/IMG_4464.jpg', desc: 'Bold empowerment badge' },
-        { id: 8, name: 'Power Statement', price: 14.99, category: 'statement', image: 'images/IMG_4470.jpg', desc: 'Bold empowerment badge' },
-        { id: 9, name: 'Power Statement', price: 14.99, category: 'statement', image: 'images/IMG_4471.jpg', desc: 'Bold empowerment badge' },
-        { id: 10, name: 'Power Statement', price: 14.99, category: 'statement', image: 'images/IMG_4391.jpg', desc: 'Bold empowerment badge' },
+        { id: 1, name: 'Abstract Art', price: 59, category: 'artistic', image: 'images/IMG_4375.jpg', desc: 'Modern abstract design badge' },
+        { id: 2, name: 'Abstract Art', price: 59, category: 'artistic', image: 'images/IMG_4402.jpg', desc: 'Modern abstract design badge' },
+        { id: 3, name: 'Abstract Art', price: 59, category: 'artistic', image: 'images/IMG_4427.jpg', desc: 'Modern abstract design badge' },
+        { id: 4, name: 'Minimal Flower', price: 49, category: 'minimalist', image: 'images/IMG_4381.jpg', desc: 'Simple floral design' },
+        { id: 5, name: 'Minimal Flower', price: 49, category: 'minimalist', image: 'images/IMG_4440.jpg', desc: 'Simple floral design' },
+        { id: 6, name: 'Minimal Flower', price: 49, category: 'minimalist', image: 'images/IMG_4444.jpg', desc: 'Simple floral design' },
+        { id: 7, name: 'Power Statement', price: 69, category: 'statement', image: 'images/IMG_4464.jpg', desc: 'Bold empowerment badge' },
+        { id: 8, name: 'Power Statement', price: 69, category: 'statement', image: 'images/IMG_4470.jpg', desc: 'Bold empowerment badge' },
+        { id: 9, name: 'Power Statement', price: 69, category: 'statement', image: 'images/IMG_4471.jpg', desc: 'Bold empowerment badge' },
+        { id: 10, name: 'Power Statement', price: 69, category: 'statement', image: 'images/IMG_4391.jpg', desc: 'Bold empowerment badge' },
         // Add 12 more products following same structure
     ];
 
@@ -61,7 +61,7 @@ $(document).ready(function() {
                         <span class="product-category">${product.category}</span>
                         <h3 class="product-title">${product.name}</h3>
                         <div class="product-price">
-                            <span class="price">$${product.price}</span>
+                            <span class="price">₹${product.price}</span>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ $(document).ready(function() {
                 </div>
                 <div class="modal-details">
                     <h2>${product.name}</h2>
-                    <p class="price">$${product.price}</p>
+                    <p class="price">₹${product.price}</p>
                     <p class="description">${product.desc}</p>
                     <button class="cta-button add-to-cart" data-id="${product.id}">Add to Cart</button>
                 </div>
@@ -146,7 +146,7 @@ $(document).ready(function() {
                         </div>
                         <div class="cart-item-details">
                             <h4>${item.name}</h4>
-                            <p>$${item.price} x ${item.quantity}</p>
+                            <p>₹${item.price} x ${item.quantity}</p>
                             <button class="remove-item" data-id="${item.id}">Remove</button>
                         </div>
                     </div>
@@ -154,7 +154,7 @@ $(document).ready(function() {
             });
         }
 
-        $('#cart-total-amount').text('$' + cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2));
+        $('#cart-total-amount').text('₹' + cart.reduce((sum, item) => sum + (item.price * item.quantity), 0).toFixed(2));
     }
 
     // Remove Cart Item
@@ -163,6 +163,13 @@ $(document).ready(function() {
         cart = cart.filter(item => item.id !== productId);
         updateCartDisplay();
     });
+    // Checkout button functionality
+$('.checkout-btn').click(function() {
+    cart = []; // Clear the cart
+    updateCartDisplay(); // Refresh the cart display
+    alert("Your order has been placed!"); // Show order confirmation
+});
+
 
     // Modal Close
     $('.close-modal, #overlay').click(function() {
@@ -171,7 +178,7 @@ $(document).ready(function() {
 
     // Header Scroll Effect
     $(window).scroll(function() {
-        $('#header').toggleClass('scrolled', $(this).scrollTop() > 50);
+        $('#header').toggleClass('scrolled', $(this).scrollTop() > 59);
     });
 
     // Form Submission
@@ -202,3 +209,4 @@ $(window).resize(function() {
         $('#navbar .nav-links').css('display', 'none');
     }
 });
+

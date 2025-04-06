@@ -1058,30 +1058,26 @@ footer {
     gap: 20px;
   }
   
-  .modal-image-container {
-    max-height: 400px;
-    overflow: hidden;
-    border-radius: 8px;
+  /* Ensure the container doesn't stretch too big */
+.modal-image {
+    max-width: 100%;
+    max-height: 60vh;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* object-fit: contain; */
+    overflow: hidden;
   }
   
-  .modal-image {
+  /* Ensure the image scales properly */
+  .modal-image img {
     max-width: 100%;
     max-height: 100%;
     object-fit: contain;
     width: auto;
     height: auto;
   }
-  /* Nuclear option - forces scaling */
-.modal-image {
-    max-width: 100% !important;
-    max-height: 60vh !important;
-    width: auto !important;
-    height: auto !important;
-  }
+  
   
   /* Responsive Adjustments */
   @media (max-width: 768px) {
